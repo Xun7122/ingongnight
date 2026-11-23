@@ -573,11 +573,9 @@ class Handler(BaseHTTPRequestHandler):
         if path=='/api/quiz':
             return self.reply(*submit_quiz(data.get('name'),data.get('last2'),data.get('answers')))
         if path=='/api/admin/login':
-            ip=self.client_address[0]
-            if not login_allowed(ip):return self.reply(429,{'error':'로그인 실패가 많습니다. 5분 후 다시 시도해 주세요.'})
             given=data.get('password')
             if not isinstance(given,str) or not PASSWORD or not hmac.compare_digest(given,PASSWORD):
-                login_failed(ip);return self.reply(403,{'error':'비밀번호가 맞지 않습니다.'})
+                return self.reply(403,{'error':'비밀번호가 맞지 않습니다.'})
             token,csrf=secrets.token_hex(32),secrets.token_hex(24)
             with connect() as db:
                 db.execute('DELETE FROM admin_sessions WHERE expires<?',(int(time.time()),))
