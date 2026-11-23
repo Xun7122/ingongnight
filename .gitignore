@@ -1,0 +1,16 @@
+.env
+.env.*
+!.env.example
+data/
+*.db
+*.sqlite3
+*.csv
+__pycache__/
+*.pyc
+.venv/
+venv/
+.DS_Store
+.vercel/
+screenshots/
+static/fonts/*.ttf
+*.zip

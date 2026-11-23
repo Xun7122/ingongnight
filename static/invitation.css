@@ -1,0 +1,118 @@
+@font-face{font-family:Letter;src:url('/static/fonts/NotoSerifKR.woff2');font-weight:100 900;font-display:swap}
+@font-face{font-family:Golden;src:url('/static/fonts/CormorantGaramond.woff2');font-weight:300 700;font-display:swap}
+#done *{box-sizing:border-box}
+#done button{font:inherit;cursor:pointer;touch-action:manipulation}
+#done .preview{display:grid;grid-template-columns:minmax(0,420px) minmax(0,1fr);gap:55px;align-items:center;max-width:920px;margin:auto}
+#done .stage{perspective:1500px;-webkit-perspective:1500px;width:100%;max-width:390px;margin:auto;padding-block:20px}
+#done .ticket{height:620px;width:100%;position:relative;transform-style:preserve-3d;-webkit-transform-style:preserve-3d;transform:rotateY(0);cursor:pointer;touch-action:manipulation}
+#done .ticket.flipped{transform:rotateY(180deg)}
+#done .face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:linear-gradient(112deg,#c7a052,#e2c47e 24%,#efdc9c 46%,#d6b162 76%,#e4c880);border:1px solid #aa833a;box-shadow:0 18px 32px #0c080b66;color:#422c1b;transform:rotateY(0deg) translateZ(1px)}
+#done .back{transform:rotateY(180deg) translateZ(1px)}
+#done .face:before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(98deg,transparent 0 2px,#825b2508 2px 3px);pointer-events:none}
+#done .frame{position:absolute;inset:13px;border:1px solid #86612c;outline:1px solid #86612c;outline-offset:-5px;display:flex;flex-direction:column;padding:22px;text-align:center}
+#done .topline{display:flex;justify-content:space-between;gap:10px;font-size:10px;letter-spacing:.08em;border-bottom:1px solid #936e3688;padding:0 0 13px}
+#done .english{font:600 41px/1 Golden,serif;margin:18px 0 0;letter-spacing:-.025em}
+#done .ornament{font:27px/1 serif;margin:12px 0 8px;color:#785323}
+#done .front h2{font:700 38px/1.55 Letter,serif;letter-spacing:.06em;margin:0}
+#done .tagline{font:14px/1.7 Letter,serif;margin:9px 0 0;color:#705029}
+#done .event{border-block:1px solid #936e3688;padding:18px 0;margin:23px 0 0}
+#done .event-date{display:flex;justify-content:center;align-items:baseline;gap:15px;font-family:Letter,serif}
+#done .event-date strong{font-size:24px;font-weight:700}
+#done .event-date span{font-size:24px;font-weight:600}
+#done .venue{font:15px/1.9 Letter,serif;margin:10px 0 0}
+#done .venue strong{font-size:18px;font-weight:650}
+#done .footer-content{display:flex;justify-content:space-between;align-items:end;gap:15px;flex:1;min-height:90px;padding-bottom:13px}
+#done .mascot img{width:77px;height:88px;display:block;object-fit:contain}
+#done .mascot span{font:12px Letter,serif}
+#done .sender{text-align:right;font:13px/1.85 Letter,serif;padding-bottom:4px}
+#done .sender strong{font-size:20px;letter-spacing:.04em}
+#done .bottom{display:flex;justify-content:space-between;border-top:1px solid #936e3688;padding-top:10px;gap:10px;font-size:9px;letter-spacing:.04em}
+#done .letter-label{font:500 14px Golden,serif;letter-spacing:.16em;border-bottom:1px solid #936e3688;padding-bottom:12px}
+#done .back h2{font:600 28px/1.6 Letter,serif;margin:8px 0 12px}
+#done .greeting{font:14px/1.8 Letter,serif;margin:0 0 16px}
+#done .letter-copy{font:14px/1.9 Letter,serif;margin:0}
+#done .back .event{margin:19px 0 14px;padding:13px 0}
+#done .back .event-date strong,#done .back .event-date span{font-size:18px}
+#done .back .venue{font-size:14px;margin-top:6px}
+#done .back .venue strong{font-size:16px}
+#done .signature{font:13px/1.8 Letter,serif;margin-top:auto;margin-bottom:14px}
+#done .signature strong{font-size:19px}
+#done .back .bottom{display:block;font-size:10px}
+#done .ticket.turn-back{animation:turn-back 1.15s cubic-bezier(.32,0,.18,1) both}
+#done .ticket.turn-front{animation:turn-front 1.15s cubic-bezier(.32,0,.18,1) both}
+@keyframes turn-back{0%{transform:rotateY(0) rotateZ(0) translateY(0) scale(1)}22%{transform:rotateY(-17deg) rotateZ(-2deg) translateY(-9px) scale(1.025)}60%{transform:rotateY(112deg) rotateZ(3deg) translateY(-16px) scale(1.04)}85%{transform:rotateY(188deg) rotateZ(-.8deg) translateY(-3px) scale(1.01)}100%{transform:rotateY(180deg) rotateZ(0) translateY(0) scale(1)}}
+@keyframes turn-front{0%{transform:rotateY(180deg) rotateZ(0) translateY(0) scale(1)}22%{transform:rotateY(197deg) rotateZ(2deg) translateY(-9px) scale(1.025)}60%{transform:rotateY(68deg) rotateZ(-3deg) translateY(-16px) scale(1.04)}85%{transform:rotateY(-8deg) rotateZ(.8deg) translateY(-3px) scale(1.01)}100%{transform:rotateY(0) rotateZ(0) translateY(0) scale(1)}}
+#done .controls{text-align:center}
+#done .controls h2{font:600 25px/1.6 Letter,serif;margin:0 0 15px}
+#done .controls p{font-size:15px;color:#c7b4a0;line-height:1.9;word-break:keep-all}
+#done .controls button{border:1px solid #c2a170;background:#e0c18a;color:#432b1a;min-height:50px;border-radius:3px;padding:12px 24px;margin-top:13px}
+#done .hint{font-size:13px!important;color:#b49d88!important}
+#done .face-indicator{display:block;color:#e8cb93;font-size:13px;margin-top:12px}
+#done button:focus-visible,#done .ticket:focus-visible,#done summary:focus-visible{outline:3px solid #fff0c8;outline-offset:5px}
+@media(max-width:740px){#done .preview{grid-template-columns:1fr;gap:15px}
+#done .stage{max-width:370px}
+#done .controls{max-width:390px;margin:auto}
+#done .controls h2{font-size:22px}
+#done .ticket{height:610px}
+#done .frame{padding:20px}
+#done .english{font-size:38px}
+#done .front h2{font-size:35px}
+#done .event{margin-top:19px;padding-block:17px}
+#done .front .topline{font-size:9px}}
+@media(max-width:350px){#done .ticket{height:610px}
+#done .frame{inset:10px;padding:19px 17px}
+#done .topline{font-size:8px!important}
+#done .english{font-size:34px}
+#done .front h2{font-size:30px}
+#done .tagline{font-size:13px}
+#done .event-date{gap:11px}
+#done .event-date strong,#done .event-date span{font-size:21px}
+#done .venue strong{font-size:16px}
+#done .mascot img{width:66px;height:77px}
+#done .sender{font-size:11px}
+#done .sender strong{font-size:18px}
+#done .bottom{font-size:8px}
+#done .back h2{font-size:24px}
+#done .greeting{font-size:13px}
+#done .letter-copy{font-size:13px;line-height:1.8}
+#done .back .event{margin-block:17px}
+#done .back .venue strong{font-size:15px}
+#done .signature{font-size:12px}}
+#done .back .ornament{font-size:22px;margin:8px 0 4px}
+#done .back h2{margin:6px 0 10px}
+#done .greeting{margin-bottom:12px}
+#done .letter-copy{line-height:1.8}
+#done .back .event{margin:14px 0 10px;padding-block:12px}
+@media(prefers-reduced-motion:reduce){#done .ticket.turn-back,#done .ticket.turn-front{animation:none!important}}
+#done [hidden]{display:none!important}
+#done .preview{grid-template-columns:minmax(0,1fr);max-width:430px;gap:0}
+#done .stage{max-width:390px;padding-block:0;height:710px;perspective:1600px}
+#done .mail-scene{position:relative;height:710px;transform-style:preserve-3d;-webkit-transform-style:preserve-3d}
+#done .mail-scene:not(.revealed){touch-action:none;user-select:none;-webkit-user-select:none;cursor:grab}
+#done .mail-scene.dragging{cursor:grabbing}
+#done .draw-layer{position:relative;z-index:2;transform:translateY(96px) rotateZ(-3deg) scale(.92);transform-origin:50% 50%;transform-style:preserve-3d;-webkit-transform-style:preserve-3d;will-change:transform}
+#done .sleeve-back{position:absolute;z-index:1;top:214px;left:-8px;right:-8px;height:440px;background:#cfbb9b;border:1px solid #ad916c;box-shadow:0 15px 30px #0c080b55;transform:translateZ(-12px) rotateZ(1deg);transform-origin:50% 80%}
+#done .sleeve-front{position:absolute;z-index:3;top:230px;left:-8px;right:-8px;height:424px;background:linear-gradient(120deg,#f3ead9,#e9dcc5 70%,#e4d2b2);color:#54353a;border:1px solid #b89b70;box-shadow:0 -5px 12px #5338231a;clip-path:polygon(0 0,43% 0,46% 3%,54% 3%,57% 0,100% 0,100% 100%,0 100%);transform:translateZ(12px) rotateZ(1deg);transform-origin:50% 80%;cursor:grab;touch-action:none}
+#done .sleeve-front:before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(84deg,transparent 0 3px,#a17d4d06 3px 4px);pointer-events:none}
+#done .paper-frame{position:absolute;inset:18px 16px;border:1px solid #bba17c;text-align:center;display:flex;flex-direction:column;align-items:center;padding:31px 20px 23px}
+#done .paper-kicker{font:12px Golden,serif;letter-spacing:.16em;color:#8a6c51}
+#done .paper-rule{height:1px;width:70px;background:#b79a72;margin:19px 0 23px}
+#done .paper-frame h2{font:600 27px/1.5 Letter,serif;letter-spacing:.08em;margin:0}
+#done .paper-frame p{font:14px/1.9 Letter,serif;color:#967b63;margin:16px 0 0}
+#done .paper-seal{width:48px;height:48px;border-radius:50%;border:3px double #bb9661;background:#62333e;color:#ebd3a3;font:italic 29px/42px Golden,serif;box-shadow:0 3px 5px #38252b22;margin:auto 0 15px}
+#done .paper-from{font:13px Letter,serif;color:#785843}
+#done .controls{max-width:390px}
+#done .controls button.again{display:block;margin:17px auto 0;background:transparent;border:0;padding:6px 15px;min-height:40px;font-size:13px;color:#bea58a}
+#done .mail-scene.revealed{height:640px}
+#done .stage:has(.revealed){height:650px}
+#done .sleeve-front:focus-visible{outline:3px solid #fff0c8;outline-offset:6px}
+@media(max-width:740px){#done .stage,#done .mail-scene{height:705px}
+#done .stage:has(.revealed){height:640px}
+#done .paper-frame{inset:17px 14px}
+#done .sleeve-front,#done .sleeve-back{left:-4px;right:-4px}}
+@media(max-width:350px){#done .paper-frame h2{font-size:24px}
+#done .paper-kicker{font-size:10px}
+#done .paper-frame p{font-size:13px}
+#done .sleeve-front,#done .sleeve-back{left:0;right:0}}
+#done .greeting{overflow-wrap:anywhere;max-width:100%}#done .claim-box[hidden]{display:none!important}
+@media print{#done .sleeve-front,#done .sleeve-back,#done .controls{display:none!important}#done .stage,#done .mail-scene{height:auto!important;perspective:none!important}#done .draw-layer{transform:none!important}#done .ticket{height:auto!important;transform:none!important;animation:none!important}#done .face{position:relative;inset:auto;display:block!important;transform:none!important;box-shadow:none;width:90mm;height:148mm;print-color-adjust:exact;-webkit-print-color-adjust:exact;margin-bottom:10mm}#done .back{break-before:page}#done .preview{display:block}}

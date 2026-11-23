@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 720" aria-label="하늘과 나무">
+<defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#007bfa"/><stop offset="1" stop-color="#79efff"/></linearGradient></defs>
+<rect width="600" height="720" fill="url(#sky)"/>
+<path d="M0 155 80 180 100 250 0 233M600 170 490 182 455 236 600 250" fill="#fff"/>
+<path d="M264 620 275 390 212 322 255 340 300 390 360 304 341 405 316 620" fill="#96602d"/>
+<path d="M100 300 178 220 210 135 390 100 505 200 570 344 415 425 175 395" fill="#a3ea1b"/>
+<path d="M210 135 390 100 340 283 150 316M390 100 505 200 340 283" fill="#c5f02d"/>
+<path d="M0 635 188 590 310 625 490 581 600 628V720H0" fill="#a5ed1b"/>
+</svg>

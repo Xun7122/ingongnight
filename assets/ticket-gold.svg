@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="540" height="300" viewBox="0 0 540 300">
+ <defs><linearGradient id="foil" x2=".9" y2="1"><stop stop-color="#FFF3B8"/><stop offset=".3" stop-color="#D3A843"/><stop offset=".57" stop-color="#FFF3B8"/><stop offset="1" stop-color="#E7C660"/></linearGradient>
+ <pattern id="lines" width="11" height="11" patternUnits="userSpaceOnUse"><path d="M0 0L11 11" stroke="#7D5C13" stroke-opacity=".07" stroke-width="1"/></pattern></defs>
+ <path d="M16 15H524V105a43 43 0 0 0 0 86V285H16V191a43 43 0 0 0 0-86Z" fill="url(#foil)" stroke="#7D5C13" stroke-width="5"/>
+ <path d="M23 22H517V109a36 36 0 0 0 0 78V278H23V187a36 36 0 0 0 0-78Z" fill="url(#lines)" stroke="#7D5C13" stroke-opacity=".8" stroke-width="1.5"/>
+ <path d="M55 48H485M55 253H485" stroke="#7D5C13" stroke-width="2" opacity=".7"/>
+ <path d="M65 73H475M65 229H475" stroke="#7D5C13" stroke-width="1" opacity=".35"/>
+ <g fill="none" stroke="#7D5C13" opacity=".8" stroke-width="3"><path d="M85 151q30-40 55 0q-25 40-55 0ZM400 151q25-40 55 0q-30 40-55 0Z"/><path d="M100 151h36m274 0h31"/></g>
+ <text x="270" y="105" text-anchor="middle" font-family="Georgia,serif" font-size="18" fill="#7D5C13" letter-spacing="7">A SPECIAL PASS</text>
+ <text x="270" y="171" text-anchor="middle" font-family="Georgia,serif" font-size="50" font-weight="700" fill="#7D5C13" letter-spacing="2">GOLDEN</text>
+ <text x="270" y="200" text-anchor="middle" font-family="Georgia,serif" font-size="17" fill="#7D5C13" letter-spacing="5">TICKET</text>
+ <circle cx="270" cy="45" r="9" fill="#7D5C13"/><path d="M262 45h16m-8-8v16" stroke="#FFF3B8" stroke-width="1.2"/>
+ </svg>

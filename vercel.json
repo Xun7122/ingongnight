@@ -1,0 +1,11 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "flask",
+  "regions": ["sin1"],
+  "functions": {
+    "vercel_app.py": {
+      "maxDuration": 60,
+      "excludeFiles": "{tests/**,screenshots/**,data/**,**/__pycache__/**,**/*.ttf,.env*,*.zip,generate_assets.py}"
+    }
+  }
+}

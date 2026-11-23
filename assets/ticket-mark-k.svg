@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 550" width="920" height="550" role="img"><rect width="920" height="550" fill="#eee5ce"/><defs><linearGradient id="foil" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff6c5"/><stop offset=".44" stop-color="#cda144"/><stop offset=".8" stop-color="#f8e4a1"/><stop offset="1" stop-color="#a87b32"/></linearGradient></defs>
+ <rect x="29" y="30" width="862" height="490" rx="16" fill="url(#foil)" stroke="#74521f" stroke-width="8"/>
+ <rect x="51" y="50" width="818" height="450" rx="6" fill="none" stroke="#795c29" stroke-width="3"/>
+ <path d="M80 135H840 M80 412H840" stroke="#6d4b22" stroke-width="2"/>
+ <text x="460" y="97" text-anchor="middle" font-family="Georgia,serif" font-size="25" fill="#4d3620" letter-spacing="6">THE WONDER FACTORY</text>
+ <text x="460" y="342" text-anchor="middle" font-family="Georgia,serif" font-size="214" font-weight="bold" fill="#3c2b1d">K</text>
+ <text x="460" y="468" text-anchor="middle" font-family="Georgia,serif" font-size="25" fill="#614826">A SPECIAL TICKET</text></svg>

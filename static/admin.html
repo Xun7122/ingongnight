@@ -1,0 +1,25 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>인지용 행사 | 관리자</title><link rel="stylesheet" href="/static/style.css?v=6.0.0"><script defer src="/static/admin.js?v=6.0.0"></script></head>
+<body class="admin-body"><main class="admin-shell">
+<header class="admin-header"><div><span class="overline">EVENT CONTROL</span><h1>인공인의 밤 · 운영 관리자</h1></div><a href="/">참가 화면 보기</a></header>
+<section id="admin-login" class="admin-panel login-panel"><h2>운영자 로그인</h2><p>최초 설치 시 발급된 비밀번호를 입력하세요.</p><form id="login-form" class="stack"><label for="password">관리자 비밀번호</label><input id="password" type="password" autocomplete="current-password" required><button class="primary" type="submit">로그인</button></form><p id="login-error" class="error" role="alert"></p></section>
+<div id="admin-main" class="hidden">
+  <div class="admin-toolbar"><span class="online-chip">초대장 수량 제한 없음</span><button id="refresh-btn" type="button" class="secondary small">새로고침</button><button id="logout-btn" type="button" class="secondary small">로그아웃</button></div>
+  <section class="dashboard-grid"><div class="metric"><span>참가 시작</span><strong id="joined-count">0</strong></div><div class="metric"><span>초대장 발급</span><strong id="completed-count">0</strong></div><div class="metric"><span>현장 확인 완료</span><strong id="checked-count">0</strong></div></section>
+  <section class="admin-panel"><div class="section-head"><div><h2>참가자 확인</h2><p>이름, 이름과 학번 끝 두 자리, 또는 초대장 전체 번호로 찾을 수 있어요.</p></div></div>
+    <form id="search-form" class="search-row"><label class="sr-only" for="search">참가자 검색</label><input id="search" type="search" placeholder="예: 홍길동 / 홍길동 07 / INJ-초대장번호" maxlength="50" autocomplete="off" enterkeyhint="search" required><button id="search-btn" type="submit" class="primary">검색</button></form><div id="search-result" class="search-result muted" role="status" aria-live="polite">참가자를 검색하면 기록이 여기에 표시됩니다.</div><p id="redeem-msg" class="error" role="status"></p>
+  </section>
+  <section class="admin-panel"><div class="section-head"><div><h2>현장 접속 QR코드</h2><p>참가자 휴대폰에서 열 수 있는 접속 주소를 입력하세요.</p></div></div>
+    <div class="search-row"><input type="url" id="public-url" placeholder="http://192.168.0.10:8000"><button id="generate-qr" type="button" class="secondary">QR 생성</button></div>
+    <div id="qr-box" class="qr-box hidden"><img id="qr-image" alt="행사 접속 QR코드"><a id="qr-download" download="event-qr.svg">QR 다운로드</a><p id="qr-address"></p></div>
+    <p class="fineprint">내부 IP 주소를 쓸 때는 노트북과 휴대폰을 같은 Wi-Fi에 연결하세요. localhost 주소는 참가자용으로 사용할 수 없습니다.</p>
+  </section>
+  <section class="admin-panel"><div class="section-head"><div><h2>문제 은행</h2><p>그림 속담 · 서재의 추리 · 봉인된 초대에서 한 문제씩, 총 세 문제가 출제됩니다.</p></div></div>
+    <div id="question-list" class="question-edit-list"></div><div class="question-actions"><button type="button" id="add-question" class="secondary small">+ 문제 추가</button><button type="button" id="save-questions" class="primary small">문제 전체 저장</button></div>
+    <p class="fineprint">추가 사진 파일은 프로젝트 <code>assets</code> 폴더에 넣고 파일명을 입력하세요. 진행 중인 퀴즈는 문제 저장 시 재시작할 수 있으며, 기존 초대장은 유지됩니다.</p><p id="questions-msg" class="small-status" role="status"></p>
+  </section>
+  <section class="admin-panel"><div class="section-head"><div><h2>최근 초대장 발급 내역</h2><a class="secondary small btn-link" href="/api/admin/participants.csv">전체 명단 CSV 다운로드</a></div></div>
+    <div class="table-scroll"><table><thead><tr><th>이름</th><th>끝 2자리</th><th>초대장 번호</th><th>발급 시각</th><th>현장 확인</th></tr></thead><tbody id="recent-body"></tbody></table></div>
+  </section>
+</div>
+<p id="global-error" class="error" role="alert"></p>
+</main></body></html>

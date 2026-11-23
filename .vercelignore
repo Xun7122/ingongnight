@@ -1,0 +1,12 @@
+.env
+.env.*
+data/
+screenshots/
+tests/
+__pycache__/
+**/__pycache__/
+**/*.pyc
+**/*.ttf
+*.zip
+.git/
+generate_assets.py

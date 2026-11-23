@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 550" width="920" height="550" role="img"><rect width="920" height="550" fill="#eee5ce"/><defs><linearGradient id="foil" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#eed28d"/><stop offset=".3" stop-color="#f9e6b1"/><stop offset=".65" stop-color="#d5ac54"/><stop offset="1" stop-color="#ffeab3"/></linearGradient></defs>
+ <rect x="33" y="34" width="854" height="482" rx="18" fill="url(#foil)" stroke="#997b48" stroke-width="8"/>
+ <rect x="55" y="57" width="810" height="436" fill="none" stroke="#644b2d" stroke-width="2"/>
+ <text x="460" y="155" text-anchor="middle" font-family="Georgia,serif" font-size="42" font-weight="bold" fill="#51381a">GOLDEN TICKET</text>
+ <text x="460" y="365" text-anchor="middle" font-family="Arial,sans-serif" font-size="170" font-weight="900" letter-spacing="22" fill="#3f2a1e">170</text>
+ <text x="460" y="450" text-anchor="middle" font-family="Georgia,serif" font-size="26" fill="#5b4328">SERIAL NUMBER</text></svg>
