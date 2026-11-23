@@ -548,7 +548,7 @@ class Handler(BaseHTTPRequestHandler):
                 rows=db.execute('SELECT name,last2,joined_at,completed_at,invite_code,checked_at FROM participants ORDER BY joined_at').fetchall()
             text=io.StringIO();text.write('\ufeff');writer=csv.writer(text)
             writer.writerow(['이름','학번 끝 2자리','참가 시작','초대장 발급','초대장 번호','현장 확인'])
-            for r in rows:writer.writerow(list(r))
+            for r in rows:writer.writerow([r[k] for k in r.keys()])
             return self.send_data(200,text.getvalue().encode('utf-8'),'text/csv; charset=utf-8',{'Content-Disposition':'attachment; filename="invitation_v6.csv"'})
         if path=='/api/admin/qr.svg':
             if not self.require_admin():return
